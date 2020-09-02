@@ -1,0 +1,10 @@
+{
+    "name": "@mouldjs/components",
+    "version": "0.0.1",
+    "description": "Mould Components",
+    "repository": "https://github.com/mouldjs/cli.git",
+    "keywords": [
+      "mould",
+      "components"
+    ]
+  }
