@@ -17,6 +17,7 @@
         "@mouldjs/core": "../core/build",
         "next": "^9.3.2",
         "ramda": "^0.27.1",
+        "react-dnd": "^10.0.2",
         "react-feather": "^2.0.8",
         "react-moveable": "^0.21.6",
         "styled-components": "^5.1.1",
