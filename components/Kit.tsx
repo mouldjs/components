@@ -1,0 +1,75 @@
+import React, { forwardRef, useContext } from 'react'
+import { ComponentPropTypes } from '@mouldjs/core/types'
+import { MouldContext, ViewContext } from '../app/Contexts'
+import List from './List'
+import MouldApp from '../mould'
+
+export default forwardRef(
+    (
+        {
+            __kitName,
+            requestUpdateProps,
+            children,
+            path,
+            ...rest
+        }: ComponentPropTypes & { __kitName: string },
+        ref
+    ) => {
+        const mould = useContext(MouldContext)
+        const view = useContext(ViewContext)
+        if (!mould || !view) {
+            return null
+        }
+        const isHostMould = mould.name === view.mouldName
+        const kit = mould.kits.find((kit) => kit.name === __kitName)
+        if (!kit) {
+            return null
+        }
+        const isMould = kit.type === 'Mould'
+        const mouldProp = isMould
+            ? {
+                  __mouldName: (kit.param as any).mouldName,
+                  __state: (kit.param as any).mouldState,
+              }
+            : {}
+        const connectedFields = isHostMould
+            ? undefined
+            : kit.dataMappingVector.map(([field]) => field)
+        if (kit.isList) {
+            const Comp = List
+
+            return (
+                <Comp
+                    ref={ref}
+                    requestUpdateProps={requestUpdateProps}
+                    path={path}
+                    connectedFields={connectedFields}
+                    {...mouldProp}
+                    {...rest}
+                >
+                    {children}
+                </Comp>
+            )
+        }
+
+        const plugin = MouldApp.getComponent(kit.type)
+        if (!plugin) {
+            return null
+        }
+
+        const Comp = plugin.Editable
+
+        return (
+            <Comp
+                ref={ref}
+                requestUpdateProps={requestUpdateProps}
+                path={path}
+                connectedFields={connectedFields}
+                {...mouldProp}
+                {...rest}
+            >
+                {children}
+            </Comp>
+        )
+    }
+)
