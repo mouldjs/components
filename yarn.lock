@@ -1132,6 +1132,24 @@
     resize-observer-polyfill "^1.5.1"
     tabbable "^4.0.0"
 
+"@modulz/primitives@^0.0.1-14":
+  version "0.0.1-42"
+  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-42.tgz#f2310ee8169ffd0523ea10597c55fc60a8ffe7ad"
+  integrity sha512-w78RHtBQlfFWBapgiyohyL8i+N1Xxmv9LvVX322d3l1Q3bWP1wyVsA3LD8iL4IofX9axYBpvh0DyMQqiOVZePA==
+  dependencies:
+    "@modulz/radix-icons" "2.4.0"
+    "@modulz/radix-system" "0.0.1-alpha.11"
+    aria-hidden "^1.1.1"
+    body-scroll-lock "^2.6.4"
+    focus-options-polyfill "^1.4.0"
+    lodash.merge "^4.6.2"
+    lodash.omit "^4.5.0"
+    lodash.pick "^4.4.0"
+    react-is "^16.12.0"
+    react-transition-group "^4.3.0"
+    resize-observer-polyfill "^1.5.1"
+    tabbable "^4.0.0"
+
 "@modulz/radix-icons@2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@modulz/radix-icons/-/radix-icons-2.4.0.tgz#62bb73265d39aa990a3adfb089f00cecbaf791c5"
@@ -1148,7 +1166,7 @@
     "@types/styled-system__css" "^5.0.5"
     csstype "^2.6.7"
 
-"@modulz/radix-system@^0.0.1-alpha.13":
+"@modulz/radix-system@^0.0.1-alpha.11", "@modulz/radix-system@^0.0.1-alpha.13":
   version "0.0.1-alpha.13"
   resolved "https://registry.yarnpkg.com/@modulz/radix-system/-/radix-system-0.0.1-alpha.13.tgz#4dfdd3f571bb5847056af89d594abd8c903c14a1"
   integrity sha512-3CmVyH8HAlreoU9u6q3NPN2klDLOY0KNO3pjEXYkjgTtWXON8K9NLTpREwNqfoWF/o58RnYF7Wqh/0tns6XLCQ==
@@ -1158,6 +1176,21 @@
     "@types/styled-system__core" "npm:@peduarte/styled-system__core"
     "@types/styled-system__css" "^5.0.5"
     csstype "^2.6.7"
+
+"@modulz/radix@0.0.1-beta.22":
+  version "0.0.1-beta.22"
+  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.22.tgz#ccaa9ff02c7649494cd265b06714eb3538dc58e4"
+  integrity sha512-k4JFxEtdHlpCGlM16YQPymKSEoe8AJfIEFddNHKYRW1L6Exv2jVtkAIpXur/oeaZAmtYh28xaVO0ADXTmP6dsg==
+  dependencies:
+    "@modulz/primitives" "^0.0.1-14"
+    "@modulz/radix-system" "^0.0.1-alpha.11"
+    "@styled-system/css" "5.1.4"
+    "@styled-system/theme-get" "^5.1.2"
+    lodash.merge "^4.6.2"
+    lodash.omit "^4.5.0"
+    lodash.pick "^4.4.0"
+    polished "^3.4.2"
+    styled-components "^5.0.1"
 
 "@modulz/radix@^0.0.1-beta.44":
   version "0.0.1-beta.44"
@@ -1179,7 +1212,7 @@
   dependencies:
     "@blueprintjs/core" "^3.31.0"
     "@blueprintjs/select" "^3.13.7"
-    "@modulz/radix" "^0.0.1-beta.44"
+    "@modulz/radix" "0.0.1-beta.22"
     ramda "^0.27.1"
     react-color "^2.18.1"
     react-feather "^2.0.8"
@@ -5657,6 +5690,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.2.tgz#7ea7c88777c723c681e33bf7988be5d008d05ac2"
+  integrity sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"

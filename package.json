@@ -7,6 +7,11 @@
         "mould",
         "components"
     ],
+    "scripts": {
+        "clean": "rm -rf build",
+        "prebuild": "yarn clean",
+        "build": "tsc -p tsconfig.build.json"
+    },
     "peerDependencies": {
         "react": "^16.8.0",
         "react-redux": "^7.0.0"
@@ -31,7 +36,8 @@
         "lint-staged": "^10.3.0",
         "prettier": "^2.1.1",
         "react": "^16.13.1",
-        "react-redux": "^7.2.1"
+        "react-redux": "^7.2.1",
+        "typescript": "^4.0.2"
     },
     "husky": {
         "hooks": {
